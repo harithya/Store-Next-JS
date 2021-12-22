@@ -23,7 +23,6 @@ export default function Home() {
     { name: "Black Edition Nike", price: "$ 70,482", img: "https://store-html.buildwithangga.id/images/products-black-edition-nike.jpg" },
     { name: "Monkey Toys", price: "$ 786", img: "https://store-html.buildwithangga.id/images/products-monkey-toys.jpg" },
     { name: "Tatakan Gelas", price: "$ 225", img: "https://store-html.buildwithangga.id/images/products-tatakan-gelas.jpg" },
-
   ]
   return (
     <div>
@@ -39,12 +38,14 @@ export default function Home() {
         </div>
       </Section>
       <Section title="New Product">
-        <div className='grid xl:grid-cols-4 gap-6'>
-          {product.map((val) => <Product
-            name={val.name}
-            price={val.price}
-            img={val.img}
-          />)}
+        <div className='grid xl:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-6'>
+          {product.map((val) =>
+            <Product
+              key={val.name}
+              name={val.name}
+              price={val.price}
+              img={val.img}
+            />)}
         </div>
       </Section>
     </div>

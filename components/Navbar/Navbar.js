@@ -6,7 +6,7 @@ import NavItem from './NavItem'
 export default function Navbar() {
     const [collapse, setCollapse] = useState(false)
     return (
-        <div className='py-5 flex flex-wrap items-center'>
+        <header className='py-5 flex sticky top-0 bg-white z-50 flex-wrap items-center'>
             <div className='w-6/12'>
                 <Image src={'/img/logo.svg'} height={50} width={50} />
             </div>
@@ -28,6 +28,6 @@ export default function Navbar() {
                     </li>
                 </ul>
             </div>
-        </div >
+        </header>
     )
 }
