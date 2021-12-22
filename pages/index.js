@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from '../components/Banner'
 import Section from '../components/Layout/Section'
 import Categories from '../components/Items/Categories'
+import Product from '../components/Items/Product'
 
 export default function Home() {
   const categories = [
@@ -11,6 +12,18 @@ export default function Home() {
     { title: "Sneaker", img: "categories-sneaker.svg" },
     { title: "Tools", img: "categories-tools.svg" },
     { title: "Baby", img: "categories-baby.svg" },
+  ]
+
+  const product = [
+    { name: "Apple watch 4", price: "$ 840", img: "https://store-html.buildwithangga.id/images/products-apple-watch.jpg" },
+    { name: "Orange Bogotta", price: "$ 945", img: "https://store-html.buildwithangga.id/images/products-orange-bogotta.jpg" },
+    { name: "Sofa Ternyaman", price: "$ 1,467", img: "https://store-html.buildwithangga.id/images/products-sofa-ternyaman.jpg" },
+    { name: "Bubuk Makketi", price: "$ 225", img: "https://store-html.buildwithangga.id/images/products-bubuk-maketti.jpg" },
+    { name: "Mavic Kawwe", price: "$ 503", img: "https://store-html.buildwithangga.id/images/products-mavic-kawe.jpg" },
+    { name: "Black Edition Nike", price: "$ 70,482", img: "https://store-html.buildwithangga.id/images/products-black-edition-nike.jpg" },
+    { name: "Monkey Toys", price: "$ 786", img: "https://store-html.buildwithangga.id/images/products-monkey-toys.jpg" },
+    { name: "Tatakan Gelas", price: "$ 225", img: "https://store-html.buildwithangga.id/images/products-tatakan-gelas.jpg" },
+
   ]
   return (
     <div>
@@ -26,7 +39,13 @@ export default function Home() {
         </div>
       </Section>
       <Section title="New Product">
-
+        <div className='grid xl:grid-cols-4 gap-6'>
+          {product.map((val) => <Product
+            name={val.name}
+            price={val.price}
+            img={val.img}
+          />)}
+        </div>
       </Section>
     </div>
   )
