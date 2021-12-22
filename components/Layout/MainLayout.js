@@ -3,9 +3,9 @@ import Navbar from '../Navbar/Navbar'
 
 export default function MainLayout(props) {
     return (
-        <div className='xl:px-48 px-5'>
+        <div>
             <Navbar />
-            <div>
+            <div className='xl:px-48 px-5'>
                 {props.children}
             </div>
             <div className='py-5 border-t flex justify-center  right-0 left-0 bottom-0'>
